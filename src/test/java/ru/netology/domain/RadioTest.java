@@ -16,6 +16,24 @@ class RadioTest {
     }
 
     @Test
+    public void shouldSwitchCurrentRadioStationNext() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(8);
+        assertEquals(8, radio.getCurrentRadioStation());
+        radio.nextRadioStation();
+        assertEquals(9, radio.getCurrentRadioStation());
+    }
+
+    @Test
+    public void shouldSwitchCurrentRadioStationPrev() {
+        Radio radio = new Radio();
+        radio.setCurrentRadioStation(2);
+        assertEquals(2, radio.getCurrentRadioStation());
+        radio.prevRadioStation();
+        assertEquals(1, radio.getCurrentRadioStation());
+    }
+
+    @Test
     public void shouldSetRadioStationOverMax() {
         Radio radio = new Radio();
         radio.setCurrentRadioStation(0);

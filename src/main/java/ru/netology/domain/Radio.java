@@ -50,17 +50,20 @@ public class Radio {
     }
 
     public void nextRadioStation() {
-        if (currentRadioStation < maxRadioStation)
+        if (currentRadioStation == maxRadioStation) {
+            this.currentRadioStation = minRadioStation;
+        }
+        else {
             currentRadioStation++;
-        if (currentRadioStation == maxRadioStation)
-            currentRadioStation = minRadioStation;
+        }
     }
 
     public void prevRadioStation() {
-        if (currentRadioStation > minRadioStation)
+        if (currentRadioStation == minRadioStation) {
+            this.currentRadioStation = maxRadioStation;
+        } else {
             currentRadioStation--;
-        if (currentRadioStation == minRadioStation)
-            currentRadioStation = maxRadioStation;
+        }
     }
 
     public int getCurrentVolume() {
