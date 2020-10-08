@@ -1,5 +1,9 @@
 package ru.netology.domain;
 
+import lombok.Getter;
+
+@Getter
+
 public class Radio {
     private int currentRadioStation;
     private int minRadioStation = 0;
@@ -28,27 +32,6 @@ public class Radio {
         this.minVolume = minVolume;
         this.maxVolume = maxVolume;
     }
-
-    public int getMinRadioStation() {
-        return minRadioStation;
-    }
-    public int getMaxRadioStation() {
-        return maxRadioStation;
-    }
-    public int getCurrentRadioStation() {
-        return currentRadioStation;
-    }
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-    public int getMinVolume() {
-        return minVolume;
-    }
-    public int getMaxVolume() {
-        return maxVolume;
-    }
-
 
     public void nextRadioStation() {
         if (currentRadioStation == maxRadioStation) {
